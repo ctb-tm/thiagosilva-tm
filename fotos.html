@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos - Thiago Silva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Fundo azul bem claro */
+            color: #000000; /* Fonte preta */
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #000080; /* Azul Marinho */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #00005a; /* Azul Marinho mais escuro */
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #FFC107; /* Amarelo */
+            color: #000080;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            border-bottom: 2px solid #000080; /* Azul Marinho */
+            padding-bottom: 10px;
+            color: #000080; /* Azul Marinho */
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            background: #fff;
+            border: 2px solid #FFC107; /* Borda amarela */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000080; /* Azul Marinho */
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galeria de Fotos</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="lei.html">Lei de Incentivo</a>
+    </nav>
+
+    <div class="container">
+        <h1>Momentos Marcantes</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="thiago01.jpg" alt="Thiago Silva jogando tênis de mesa">
+            </div>
+            <div class="gallery-item">
+                <img src="thiago02.jpg" alt="Thiago Silva em competição">
+            </div>
+            <div class="gallery-item">
+                <img src="thiago03.jpg" alt="Thiago Silva concentrado na partida">
+            </div>
+            <div class="gallery-item">
+                <img src="thiago04.jpg" alt="Close em Thiago Silva durante o jogo">
+            </div>
+            <div class="gallery-item">
+                <img src="thiago05.jpg" alt="Thiago Silva no pódio com outros atletas">
+            </div>
+            <div class="gallery-item">
+                <img src="thiago06.jpg" alt="Thiago Silva com medalhas e troféus">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Infográfico Esportivo - Thiago Silva &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
+

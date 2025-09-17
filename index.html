@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Silva - Tênis de Mesa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Fundo azul bem claro */
+            color: #000000; /* Fonte preta */
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #000080; /* Azul Marinho */
+            color: #fff;
+            padding: 1rem 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-left-container {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Espaço entre a logo e o texto */
+        }
+        .logo-left {
+            height: 50px; /* Tamanho menor para a logo AABB */
+            border-radius: 5px;
+        }
+        .athlete-text {
+            color: #FFC107; /* Amarelo */
+            font-size: 1.2em;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .logo-right {
+            height: 80px; /* Tamanho maior para a logo do Thiago */
+            border-radius: 5px;
+        }
+        nav {
+            background: #00005a; /* Azul Marinho um pouco mais escuro */
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #FFC107; /* Amarelo */
+            color: #000080;
+            border-radius: 5px;
+        }
+        .main {
+            padding: 20px 0;
+        }
+        .profile-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .profile-img {
+            flex: 1;
+            max-width: 300px;
+            min-width: 200px;
+        }
+        .profile-img img {
+            width: 100%;
+            border-radius: 50%;
+            border: 5px solid #FFC107; /* Borda amarela */
+        }
+        .profile-info {
+            flex: 2;
+        }
+        .profile-info h1 {
+            color: #000080; /* Azul Marinho */
+            margin-top: 0;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #000080; /* Azul Marinho */
+            padding-bottom: 10px;
+            color: #000080; /* Azul Marinho */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f0f4f8;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #000080; /* Azul Marinho */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000080; /* Azul Marinho */
+            color: #fff;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            header h1 {
+                font-size: 1.2em;
+                order: 1; /* Centraliza o título */
+            }
+             .logo-left-container {
+                order: 2;
+            }
+            .logo-right {
+                order: 3;
+                height: 60px; /* Ajusta o tamanho da logo para mobile */
+            }
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-left-container">
+            <img src="aabb.jpg" alt="Logo AABB" class="logo-left">
+            <span class="athlete-text"><strong>ATLETA</strong></span>
+        </div>
+        <h1>Thiago Silva - Talento do Tênis de Mesa</h1>
+        <img src="thiagologo.jpg" alt="Logo Thiago Silva" class="logo-right">
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="projeto.html">Projeto</a>
+        <a href="lei.html">Lei de Incentivo</a>
+    </nav>
+
+    <div class="container main">
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="thiago01.jpg" alt="Foto de Thiago Silva">
+            </div>
+            <div class="profile-info">
+                <h1>Thiago Marcos Gouveia da Silva</h1>
+                <p><strong>Data de Nascimento:</strong> 04 de Maio de 2012</p>
+                <p><strong>Modalidade:</strong> Tênis de Mesa</p>
+                <p><strong>Cidade:</strong> Salvador, Bahia</p>
+                <p>Thiago é um jovem atleta que, com incrível talento e dedicação, já se destaca como uma das maiores promessas do tênis de mesa baiano. Em menos de dois anos de prática, transformou sua paixão em resultados expressivos.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Como Tudo Começou</h2>
+            <p>A jornada de Thiago no tênis de mesa começou em novembro de 2023, de forma despretensiosa, em uma mesa improvisada em casa com o apoio de seu pai. Mesmo com poucos recursos, seu talento natural e empenho o levaram a conquistar marcas impressionantes em pouco tempo, superando atletas mais experientes e se tornando o atleta mais promissor do estado.</p>
+        </div>
+
+        <div class="section">
+            <h2>Principais Conquistas</h2>
+            <ul>
+                <li><strong>1º Lugar no Ranking Estadual SUB-13 (2025)</strong></li>
+                <li>Campeão de etapas do Campeonato Baiano SUB-13</li>
+                <li>Vice-campeão nos Jogos Escolares</li>
+                <li>Medalhista triplo (bronze) na Copa Brasil CBTM em Salvador (2025)</li>
+                <li>Representante da Bahia nos Jogos Escolares Brasileiros (JEBS)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Objetivo Principal</h2>
+            <p>O grande sonho de Thiago é <strong>entrar para a Seleção Brasileira de Tênis de Mesa</strong> e representar o Brasil em competições internacionais. Com treinamento sistematizado e muito foco, ele busca transformar esse sonho em realidade, inspirando outros jovens a seguirem o caminho do esporte.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Infográfico Esportivo - Thiago Silva &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
+
