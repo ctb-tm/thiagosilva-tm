@@ -9,8 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8; /* Fundo azul bem claro */
-            color: #000000; /* Fonte preta */
+            background-color: #f0f4f8;
+            color: #000000;
         }
         .container {
             max-width: 1200px;
@@ -23,18 +23,18 @@
             padding: 1rem 20px;
             display: flex;
             align-items: center;
-            gap: 20px;
         }
         .header-logo {
             height: 60px;
             border-radius: 5px;
+            margin-right: 20px;
         }
         header h1 {
             margin: 0;
             font-size: 1.8em;
         }
         nav {
-            background: #00005a; /* Azul Marinho mais escuro */
+            background: #00005a;
             color: #fff;
             padding: 0.5rem;
             text-align: center;
@@ -50,43 +50,34 @@
             color: #000080;
             border-radius: 5px;
         }
-        .gallery-title {
-            text-align: center;
-            color: #000080;
-            margin-top: 40px;
-            border-bottom: 2px solid #000080;
-            padding-bottom: 10px;
-        }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-top: 20px;
         }
         .gallery-item {
-            background: #fff;
-            border: 1px solid #ddd;
+            background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s ease;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .gallery-item img {
             width: 100%;
-            height: 250px; /* Altura fixa */
+            height: 250px; /* Altura fixa para todas as imagens */
             object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
             display: block;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #000080; /* Azul Marinho */
+            background: #000080;
             color: #fff;
-            margin-top: 40px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -105,26 +96,17 @@
     </nav>
 
     <div class="container">
-        <h2 class="gallery-title">Momentos da Trajetória</h2>
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="./thiago01.jpg" alt="Thiago Silva em ação 1">
-            </div>
-            <div class="gallery-item">
-                <img src="./thiago02.jpg" alt="Thiago Silva em ação 2">
-            </div>
-            <div class="gallery-item">
-                <img src="./thiago03.jpg" alt="Thiago Silva em ação 3">
-            </div>
-            <div class="gallery-item">
-                <img src="./thiago04.jpg" alt="Thiago Silva em ação 4">
-            </div>
-            <div class="gallery-item">
-                <img src="./thiago05.jpg" alt="Thiago Silva em pódio">
-            </div>
-            <div class="gallery-item">
-                <img src="./thiago06.jpg" alt="Thiago Silva com medalhas">
-            </div>
+            <div class="gallery-item"><img src="./thiago01.jpg" alt="Foto de Thiago 01"></div>
+            <div class="gallery-item"><img src="./thiago02.jpg" alt="Foto de Thiago 02"></div>
+            <div class="gallery-item"><img src="./thiago03.jpg" alt="Foto de Thiago 03"></div>
+            <div class="gallery-item"><img src="./thiago04.jpg" alt="Foto de Thiago 04"></div>
+            <div class="gallery-item"><img src="./thiago05.jpg" alt="Foto de Thiago 05"></div>
+            <div class="gallery-item"><img src="./thiago06.jpg" alt="Foto de Thiago 06"></div>
+            <div class="gallery-item"><img src="./thiago07.jpg" alt="Foto de Thiago 07"></div>
+            <div class="gallery-item"><img src="./thiago08.jpg" alt="Foto de Thiago 08"></div>
+            <div class="gallery-item"><img src="./thiago09.jpg" alt="Foto de Thiago 09"></div>
+            <div class="gallery-item"><img src="./thiago10.jpg" alt="Foto de Thiago 10"></div>
         </div>
     </div>
 
