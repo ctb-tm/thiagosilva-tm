@@ -3,158 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lei de Incentivo ao Esporte - Salvador</title>
+    <title>Thiago Silva - Lei de Incentivo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #000000;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #000080; /* Azul Marinho */
-            color: #fff;
-            padding: 1rem 20px;
-            display: flex;
-            align-items: center;
-        }
-        .header-logo {
-            height: 60px;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        nav {
-            background: #00005a;
-            color: #fff;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #FFC107; /* Amarelo */
-            color: #000080;
-            border-radius: 5px;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            border-bottom: 2px solid #000080;
-            padding-bottom: 10px;
-            color: #000080;
-        }
-        p {
-            line-height: 1.6;
-            text-align: justify;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #000080;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .note {
-            font-size: 0.9em;
-            font-style: italic;
-            color: #555;
-            margin-top: 15px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000080;
-            color: #fff;
-            margin-top: 20px;
+        /* Estilos gerais (iguais para todas as páginas) */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #000000; }
+        .container { max-width: 1000px; margin: auto; overflow: hidden; padding: 0 20px; }
+        header { background: #000080; color: #fff; padding: 1rem 20px; text-align: center; display: flex; justify-content: space-between; align-items: center; }
+        .logo-left-container { display: flex; align-items: center; gap: 15px; }
+        .logo-left { height: 50px; border-radius: 5px; }
+        .athlete-text { color: #FFC107; font-size: 1.2em; }
+        header h1 { margin: 0; font-size: 1.5em; color: #fff; }
+        .logo-right { height: 80px; border-radius: 5px; }
+        nav { background: #00005a; color: #fff; padding: 0.5rem; text-align: center; }
+        nav a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; transition: background-color 0.3s; }
+        nav a:hover { background-color: #FFC107; color: #000080; border-radius: 5px; }
+        .main { padding: 20px 0; }
+        .section { background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; }
+        footer { text-align: center; padding: 20px; background: #000080; color: #fff; margin-top: 20px; }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            header h1 { font-size: 1.2em; order: 1; }
+            .logo-left-container { order: 2; }
+            .logo-right { order: 3; height: 60px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="./salvador.jpg" alt="Logo Prefeitura Salvador" class="header-logo">
-        <h1>Lei de Incentivo ao Esporte - Salvador/BA</h1>
+        <div class="logo-left-container">
+            <img src="aabb.jpg" alt="Logo AABB" class="logo-left">
+            <span class="athlete-text"><strong>ATLETA</strong></span>
+        </div>
+        <h1>Thiago Silva - Talento do Tênis de Mesa</h1>
+        <img src="thiagologo.jpg" alt="Logo Thiago Silva" class="logo-right">
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="fotos.html">Fotos</a>
+        <a href="index.html">Apresentação</a>
+        <a href="atleta.html">Atleta</a>
+        <a href="album.html">Álbum</a>
         <a href="projeto.html">Projeto</a>
         <a href="lei.html">Lei de Incentivo</a>
     </nav>
 
-    <div class="container">
+    <div class="container main">
         <div class="section">
-            <h2>Como Funciona a Lei de Incentivo em Salvador (Programa Viva Esporte)</h2>
-            <p>A Prefeitura de Salvador, através da Secretaria Municipal da Fazenda (SEFAZ) e da Secretaria de Promoção Social, Combate à Pobreza, Esportes e Lazer (SEMPRE), regulamentou o "Programa de Incentivo ao Esporte - VIVA ESPORTE". Este programa permite que empresas contribuintes do Imposto Sobre Serviços de Qualquer Natureza (ISS) destinem parte do imposto devido para financiar projetos esportivos na cidade.</p>
-            <p>O objetivo é promover o desenvolvimento esportivo, a inclusão social e a descoberta de novos talentos em Salvador, utilizando a renúncia fiscal como ferramenta para que a iniciativa privada possa apoiar diretamente atletas e eventos locais.</p>
+            <h2>Lei de Incentivo ao Esporte</h2>
+            <p><strong>Insira aqui as informações sobre a Lei de Incentivo ao Esporte.</strong></p>
+            <p>Explique como funciona, quem pode apoiar, quais são os benefícios para os patrocinadores e como o projeto do Thiago se enquadra nesta lei.</p>
+            <p>Adicione links e documentos relevantes, se necessário.</p>
         </div>
-
-        <div class="section">
-            <h2>Simulação de Incentivo Fiscal - Viva Esporte Salvador</h2>
-            <p>O Viva Esporte de Salvador permite que empresas que pagam ISS possam destinar até 20% do valor anual do imposto devido para apoiar projetos esportivos, com abatimento do ISS após o investimento realizado. Abaixo segue uma tabela simulando empresas que pagam de R$ 100.000 até R$ 1.200.000 de ISS por ano, mostrando o valor do ISS anual, o limite de 20% para incentivo e o valor máximo de aporte mensal possível:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Valor ISS pago ano (R$)</th>
-                        <th>20% Viva Esporte (R$)</th>
-                        <th>Aporte mensal máx. (R$)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>100.000</td><td>20.000</td><td>1.666,67</td></tr>
-                    <tr><td>200.000</td><td>40.000</td><td>3.333,33</td></tr>
-                    <tr><td>300.000</td><td>60.000</td><td>5.000,00</td></tr>
-                    <tr><td>400.000</td><td>80.000</td><td>6.666,67</td></tr>
-                    <tr><td>500.000</td><td>100.000</td><td>8.333,33</td></tr>
-                    <tr><td>600.000</td><td>120.000</td><td>10.000,00</td></tr>
-                    <tr><td>700.000</td><td>140.000</td><td>11.666,67</td></tr>
-                    <tr><td>800.000</td><td>160.000</td><td>13.333,33</td></tr>
-                    <tr><td>900.000</td><td>180.000</td><td>15.000,00</td></tr>
-                    <tr><td>1.000.000</td><td>200.000</td><td>16.666,67</td></tr>
-                    <tr><td>1.100.000</td><td>220.000</td><td>18.333,33</td></tr>
-                    <tr><td>1.200.000</td><td>240.000</td><td>20.000,00</td></tr>
-                </tbody>
-            </table>
-            <p class="note">O limite de incentivo é de 20% do ISS devido no ano, podendo ser aportado mensalmente dividido por 12 meses.</p>
-            <p class="note">O incentivo depende de aprovação do projeto esportivo e não é válido para empresas do Simples Nacional.</p>
-        </div>
-
     </div>
 
     <footer>
-        <p>Infográfico Esportivo - Thiago Silva &copy; 2026</p>
+        <p>Contato: Marcos Dias 71-98867-6473 </p>
+        <p>marcos.dias.g@gmail.com </p>
     </footer>
 
 </body>
 </html>
-
