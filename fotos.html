@@ -3,119 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos - Thiago Silva</title>
+    <title>Thiago Silva - Álbum de Fotos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #000000;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #000080; /* Azul Marinho */
-            color: #fff;
-            padding: 1rem 20px;
-            display: flex;
-            align-items: center;
-        }
-        .header-logo {
-            height: 60px;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        nav {
-            background: #00005a;
-            color: #fff;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #FFC107; /* Amarelo */
-            color: #000080;
-            border-radius: 5px;
-        }
+        /* Estilos gerais (iguais para todas as páginas) */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #000000; }
+        .container { max-width: 1000px; margin: auto; overflow: hidden; padding: 0 20px; }
+        header { background: #000080; color: #fff; padding: 1rem 20px; text-align: center; display: flex; justify-content: space-between; align-items: center; }
+        .logo-left-container { display: flex; align-items: center; gap: 15px; }
+        .logo-left { height: 50px; border-radius: 5px; }
+        .athlete-text { color: #FFC107; font-size: 1.2em; }
+        header h1 { margin: 0; font-size: 1.5em; color: #fff; }
+        .logo-right { height: 80px; border-radius: 5px; }
+        nav { background: #00005a; color: #fff; padding: 0.5rem; text-align: center; }
+        nav a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; transition: background-color 0.3s; }
+        nav a:hover { background-color: #FFC107; color: #000080; border-radius: 5px; }
+        .main { padding: 20px 0; }
+        .section { background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; }
+        footer { text-align: center; padding: 20px; background: #000080; color: #fff; margin-top: 20px; }
+        
+        /* Estilos da Galeria */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
-            margin-top: 20px;
         }
         .gallery-item {
-            background-color: #fff;
             border-radius: 8px;
-            overflow: hidden;
+            overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: translateY(-5px);
         }
         .gallery-item img {
             width: 100%;
-            height: 250px; /* Altura fixa para todas as imagens */
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-            display: block;
+            height: 100%;
+            aspect-ratio: 16 / 9; /* Proporção 16:9 */
+            object-fit: cover; /* Cobre todo o espaço, cortando se necessário */
+            object-position: top center; /* Garante que o corte seja feito por baixo, preservando o topo */
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000080;
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Efeito de zoom suave */
+        }
+
+        /* Estilos do Modal (imagem maximizada) */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
             color: #fff;
-            margin-top: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            header h1 { font-size: 1.2em; order: 1; }
+            .logo-left-container { order: 2; }
+            .logo-right { order: 3; height: 60px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="./thiagologo.jpg" alt="Logo Thiago Silva" class="header-logo">
-        <h1>Galeria de Fotos</h1>
+        <div class="logo-left-container">
+            <img src="aabb.jpg" alt="Logo AABB" class="logo-left">
+            <span class="athlete-text"><strong>ATLETA</strong></span>
+        </div>
+        <h1>Thiago Silva - Talento do Tênis de Mesa</h1>
+        <img src="thiagologo.jpg" alt="Logo Thiago Silva" class="logo-right">
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="fotos.html">Fotos</a>
+        <a href="index.html">Apresentação</a>
+        <a href="atleta.html">Atleta</a>
+        <a href="album.html">Álbum</a>
         <a href="projeto.html">Projeto</a>
         <a href="lei.html">Lei de Incentivo</a>
     </nav>
 
-    <div class="container">
-        <div class="gallery">
-            <div class="gallery-item"><img src="./thiago01.jpeg" alt="Foto de Thiago 01"></div>
-            <div class="gallery-item"><img src="./thiago02.jpeg" alt="Foto de Thiago 02"></div>
-            <div class="gallery-item"><img src="./thiago03.jpeg" alt="Foto de Thiago 03"></div>
-            <div class="gallery-item"><img src="./thiago04.jpeg" alt="Foto de Thiago 04"></div>
-            <div class="gallery-item"><img src="./thiago05.jpeg" alt="Foto de Thiago 05"></div>
-            <div class="gallery-item"><img src="./thiago06.jpeg" alt="Foto de Thiago 06"></div>
-            <div class="gallery-item"><img src="./thiago07.jpeg" alt="Foto de Thiago 07"></div>
-            <div class="gallery-item"><img src="./thiago08.jpeg" alt="Foto de Thiago 08"></div>
-            <div class="gallery-item"><img src="./thiago09.jpeg" alt="Foto de Thiago 09"></div>
-            <div class="gallery-item"><img src="./thiago10.jpeg" alt="Foto de Thiago 10"></div>
-            <div class="gallery-item"><img src="./thiago11.jpeg" alt="Foto de Thiago 11"></div>
-            <div class="gallery-item"><img src="./thiago12.jpeg" alt="Foto de Thiago 12"></div>
+    <div class="container main">
+        <div class="section">
+            <h2>Álbum de Fotos</h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="foto1.jpg" alt="Descrição da foto 1"></div>
+                <div class="gallery-item"><img src="foto2.jpg" alt="Descrição da foto 2"></div>
+                <div class="gallery-item"><img src="foto3.jpg" alt="Descrição da foto 3"></div>
+                <div class="gallery-item"><img src="foto4.jpg" alt="Descrição da foto 4"></div>
+                <div class="gallery-item"><img src="foto5.jpg" alt="Descrição da foto 5"></div>
+                <div class="gallery-item"><img src="foto6.jpg" alt="Descrição da foto 6"></div>
+            </div>
         </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgModal">
     </div>
 
     <footer>
-        <p>Infográfico Esportivo - Thiago Silva &copy; 2025</p>
+        <p>Contato: Marcos Dias 71-98867-6473 </p>
+        <p>marcos.dias.g@gmail.com </p>
     </footer>
+
+    <script>
+        // Pega o modal
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgModal");
+        var galleryImages = document.querySelectorAll(".gallery-item img");
+
+        // Adiciona o evento de clique para cada imagem da galeria
+        galleryImages.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Pega o elemento <span> que fecha o modal
+        var span = document.getElementsByClassName("close-modal")[0];
+
+        // Quando o usuário clicar no (x), fecha o modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora da imagem
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
-
