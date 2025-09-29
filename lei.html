@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago Silva - Lei de Incentivo</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #000000; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #000000; line-height: 1.6; }
         .container { max-width: 1000px; margin: auto; overflow: hidden; padding: 0 20px; }
-        header { background: #000080; color: #fff; padding: 1rem 20px; text-align: center; display: flex; justify-content: space-between; align-items: center; }
+        header { background: #000080; color: #fff; padding: 1rem 20px; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo-left-container { display: flex; align-items: center; gap: 15px; }
         .logo-left { height: 50px; border-radius: 5px; }
         .athlete-text { color: #FFC107; font-size: 1.2em; }
@@ -18,7 +18,11 @@
         nav a:hover { background-color: #FFC107; color: #000080; border-radius: 5px; }
         .main { padding: 20px 0; }
         .section { background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; }
+        h1.page-title, h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; }
+        .header-lei { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .header-lei img { height: 60px; border-radius: 5px; }
+        .highlight { background-color: #fff9c4; border-left: 5px solid #000080; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        ul, ol { padding-left: 20px; }
         footer { text-align: center; padding: 20px; background: #000080; color: #fff; margin-top: 20px; }
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; }
@@ -46,10 +50,51 @@
     </nav>
     <div class="container main">
         <div class="section">
-            <h2>Lei de Incentivo ao Esporte</h2>
-            <p><strong>Insira aqui as informações sobre a Lei de Incentivo ao Esporte.</strong></p>
-            <p>Explique como funciona, quem pode apoiar, quais são os benefícios para os patrocinadores e como o projeto do Thiago se enquadra nesta lei.</p>
-            <p>Adicione links e documentos relevantes, se necessário.</p>
+            <div class="header-lei">
+                <img src="salvador.jpg" alt="Logomarca da Prefeitura de Salvador">
+                <h1 class="page-title">Como Funciona a Lei de Incentivo ao Esporte em Salvador</h1>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Programa de Incentivo ao Esporte - VIVA ESPORTE</h2>
+            <p>Em Salvador, o incentivo ao esporte é regulamentado pelo <strong>Decreto Nº 37.766 de 20 de novembro de 2023</strong>, que estrutura o programa "VIVA ESPORTE", criado pela <strong>Lei Municipal nº 9.738/2023</strong>.</p>
+            <p>Este programa permite que empresas apoiem financeiramente projetos esportivos na cidade em troca de incentivos fiscais, especificamente através do <strong>Imposto Sobre Serviços (ISS)</strong>.</p>
+        </div>
+        <div class="section">
+            <h2>Como a Lei Funciona?</h2>
+            <div class="highlight">
+                <p><strong>Para a Empresa (Contribuinte Incentivador):</strong> Uma empresa pode destinar parte do valor que pagaria em ISS para patrocinar um projeto esportivo aprovado pela prefeitura. Em troca, recebe o abatimento fiscal correspondente.</p>
+            </div>
+            <p>O processo segue os seguintes passos:</p>
+            <ol>
+                <li><strong>Aprovação do Projeto:</strong> O atleta ou entidade esportiva submete um projeto detalhado, que é avaliado e aprovado pela Comissão de Avaliação de Projetos Esportivos (CAPE).</li>
+                <li><strong>Captação de Recursos:</strong> Com o projeto aprovado, o proponente busca empresas interessadas em patrociná-lo.</li>
+                <li><strong>Repasse do Valor:</strong> A empresa patrocinadora deposita o valor do patrocínio diretamente na conta do projeto.</li>
+                <li><strong>Incentivo Fiscal:</strong> A empresa pode então deduzir o valor investido do ISS a pagar, conforme as regras estabelecidas pela lei municipal.</li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2>Quem Pode Patrocinar?</h2>
+            <p>Pessoas jurídicas (empresas) contribuintes do ISS no município de Salvador que estejam em situação fiscal regular perante o Município.</p>
+        </div>
+        <div class="section">
+            <h2>Quais Projetos Podem Receber o Incentivo?</h2>
+            <p>Para serem elegíveis, os projetos desportivos e paradesportivos devem atender a alguns critérios, como:</p>
+            <ul>
+                <li>Ter o Município de Salvador como sede de suas atividades.</li>
+                <li>Serem exclusivamente voltados para o esporte.</li>
+                <li>Garantir amplo acesso ao resultado dos projetos para a comunidade.</li>
+                <li>Serem destinados a promover a inclusão social, preferencialmente em comunidades de vulnerabilidade social.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Uma Parceria Vantajosa</h2>
+            <p>A Lei de Incentivo ao Esporte é uma ferramenta poderosa que cria um ciclo virtuoso:</p>
+            <ul>
+                <li><strong>Atletas como Thiago</strong> recebem o suporte financeiro necessário para treinar, competir e alcançar seu pleno potencial.</li>
+                <li><strong>Empresas</strong> fortalecem sua marca, associando-a a valores positivos como superação e desenvolvimento social, além de receberem o benefício fiscal.</li>
+                <li><strong>A Cidade de Salvador</strong> ganha com o fomento ao esporte, a descoberta de novos talentos e a promoção da inclusão social para seus jovens.</li>
+            </ul>
         </div>
     </div>
     <footer>
